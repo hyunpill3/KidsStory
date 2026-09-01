@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+target/
+
+# Env files
+.env
+.env.local
+!*.env.example
+!.env.*.example
+
+# Next.js
+frontend/.next/
+frontend/out/
+frontend/next-env.d.ts
+
+# Build artifacts
+dist/
+build/
+
+# Media / generated assets
+backend/media/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/

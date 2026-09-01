@@ -1,0 +1,57 @@
+spring:
+  application:
+    name: kidsstory-backend
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/kidsstory}
+    username: ${SPRING_DATASOURCE_USERNAME:kidsstory}
+    password: ${SPRING_DATASOURCE_PASSWORD:kidsstory}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  flyway:
+    enabled: true
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 20MB
+
+server:
+  port: 8000
+
+app:
+  environment: ${ENVIRONMENT:local}
+  secret-key: ${SECRET_KEY:change-this-to-a-random-secret-key}
+  access-token-expire-minutes: ${ACCESS_TOKEN_EXPIRE_MINUTES:60}
+  allowed-origins: ${ALLOWED_ORIGINS:http://localhost:3000}
+
+  storage-backend: ${STORAGE_BACKEND:local}
+  media-root: ${MEDIA_ROOT:./media}
+  media-url: ${MEDIA_URL:http://localhost:8000/media}
+
+  r2-account-id: ${R2_ACCOUNT_ID:}
+  r2-access-key-id: ${R2_ACCESS_KEY_ID:}
+  r2-secret-access-key: ${R2_SECRET_ACCESS_KEY:}
+  r2-bucket-name: ${R2_BUCKET_NAME:kidsstory}
+  r2-endpoint-url: ${R2_ENDPOINT_URL:}
+  r2-public-url: ${R2_PUBLIC_URL:}
+
+  anon-cookie-name: ${ANON_COOKIE_NAME:ks_anon_id}
+  anon-cookie-max-age-days: ${ANON_COOKIE_MAX_AGE_DAYS:30}
+
+  max-photos-free: ${MAX_PHOTOS_FREE:1}
+  max-video-length-free: ${MAX_VIDEO_LENGTH_FREE:10}
+  free-daily-project-limit: ${FREE_DAILY_PROJECT_LIMIT:1}
+  watermark-text: ${WATERMARK_TEXT:KidsStory}
+  # Blank = auto-detect per OS. Override only if ffmpeg's drawtext filter
+  # can't find a usable font on your machine.
+  watermark-font-path: ${WATERMARK_FONT_PATH:}
+  max-upload-bytes: ${MAX_UPLOAD_BYTES:8388608}
+
+  project-ttl-hours: ${PROJECT_TTL_HOURS:24}
+  cleanup-interval-minutes: ${CLEANUP_INTERVAL_MINUTES:60}
+
+  turnstile-secret-key: ${TURNSTILE_SECRET_KEY:}
+
+  video-gen-api-key: ${VIDEO_GEN_API_KEY:}
+  video-gen-model: ${VIDEO_GEN_MODEL:kwaivgi/kling-v1.6-standard}
