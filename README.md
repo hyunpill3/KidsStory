@@ -6,7 +6,7 @@ A service that turns a photo and a story into a short AI-animated children's vid
 
 1. **Upload a photo** — of a child, family, pet, drawing, or toy (1 free, 2-3 on Basic, 5+ on Premium)
 2. **Write a story** — a sentence or two is enough for AI to expand into a full story; leave it blank and AI generates one from the photo alone
-3. **Choose options** — child's age, video length (30s/1min/3min), style (3D/storybook/watercolor/cartoon), voice, language
+3. **Choose options (V2)** — child's age, video length (30s/1min/3min), style (3D/storybook/watercolor/cartoon), voice, language
 4. **AI generation pipeline** — photo analysis → story generation/expansion → scene splitting → scene rendering → narration →
    music/sound effects → final MP4 composition → user notification
 
